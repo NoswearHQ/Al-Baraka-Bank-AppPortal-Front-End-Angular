@@ -1,0 +1,84 @@
+<body>
+  <div class="jumbotron">
+    <h1>CNP</h1>      
+    <p>CERTIFICAT DE NON PAIEMENT DE CHEQUE</p>
+    <button type="button" class="btn btn-dark" (click)="back()">     <-- Retour</button>
+  </div>
+  <div class="container">
+    <div class="row">
+     <div class="col">
+       <div class="icon"><img src="../../assets/img/robot.png"></div>
+          </div>
+            <div class="col">
+                <br><br><br><br><br><br>
+                <div class="text-center">
+                  <h5 >Numéro de chèque </h5><br>
+              </div>
+              <input type="text" name="numerocheque" size="30" [(ngModel)]="numerocheque"><br><br>
+                  <button  type="button" class="btn btn-primary" (click)="ExtractCNP()">Envoyer</button> 
+                  <button type="button" class="btn btn-danger" (click)="Clear()" >Effacer</button>
+                  <button *ngIf="show" type="button" class="btn btn-success" (click)="Print()"  >Imprimer</button>
+                  <br> <br>
+
+                  <div *ngIf="show" class="d-flex justify-content-center">
+                   <h6>LE(S) SIGNATAIRE(S)</h6><br><br><br>
+                   <select class="custom-select"  (change)="selectChangeHandlerS1($event)">
+                     <option ></option>
+                    <option *ngFor="let book of Names" [ngValue]="book">{{book.name}} </option>
+                  </select>
+                  <select class="custom-select"  (change)="selectChangeHandlerS2($event)">
+                    <option ></option>
+                   <option *ngFor="let book of Names" [ngValue]="book">{{book.name}} </option>
+                 </select>
+                 <select class="custom-select"  (change)="selectChangeHandlerS3($event)">
+                  <option ></option>
+                 <option *ngFor="let book of Names" [ngValue]="book">{{book.name}} </option>
+               </select>
+                   </div>
+
+                   
+                  <div *ngIf="show" class="d-flex justify-content-center">
+                    <h6>Personne(s) Physique(s)</h6><br><br><br>
+                    <select class="custom-select"  (change)="selectChangeHandlerS4($event)">
+                      <option ></option>
+                     <option *ngFor="let book of Names" [ngValue]="book">{{book.name}} </option>
+                   </select>
+                   <select class="custom-select"  (change)="selectChangeHandlerS5($event)">
+                     <option ></option>
+                    <option *ngFor="let book of Names" [ngValue]="book">{{book.name}} </option>
+                  </select>
+                  <select class="custom-select"  (change)="selectChangeHandlerS6($event)">
+                   <option ></option>
+                  <option *ngFor="let book of Names" [ngValue]="book">{{book.name}} </option>
+                </select>
+                    </div>
+
+                    <div *ngIf="show" class="d-flex justify-content-center">
+                      <div class="alert alert-success">
+                        <strong>Success!</strong>
+                      </div>
+                      </div>
+                   
+
+
+                   <br> <br> 
+                   <div *ngIf="showAlert" class="alert alert-danger" role="alert">
+                     {{err}}
+                   </div>
+                  <div *ngIf="showSpin" class="d-flex justify-content-center">
+                   <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                     <span class="sr-only">Loading...</span>    
+                   </div><br> 
+                 </div>     
+          </div>
+          </div>  
+ <table class="table table-striped">
+             <tr *ngFor="let book of tab"> 
+               <th><h6>{{book.champ}}</h6></th>
+               <th><h6>{{book.name}}</h6></th>     
+             </tr>
+          </table>
+          <ul>       
+       </ul>           
+</div>
+</body>

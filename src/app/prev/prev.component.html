@@ -1,0 +1,29 @@
+
+<header>
+    <app-navbar></app-navbar>
+  </header>
+  <body>
+    <div class="container">
+        <div class="box">
+            <div class="icon"><img src="../../assets/img/lettredechange.png"></div>
+                <div class="content">
+                        <h3>Lettre de change</h3><br>
+                                <a [routerLink]="['/prev/LDC']">Traitement</a><br>
+                
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><img src="../../assets/img/prev.jpg"></div>
+                <div class="content">
+                    <h3>Prélèvement</h3><br>
+                                <a [routerLink]="['/prev/PREVE']">Autre Banque</a><br>
+                                <a [routerLink]="['/prev/PREVEcpt']">Compte Al baraka</a><br>
+                    
+            </div>
+        </div>
+       
+    </div>
+    </body>
+    <footer>
+        <app-footer></app-footer>
+    </footer>

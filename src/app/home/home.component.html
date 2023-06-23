@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/home">Home</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            
+            <div class="card-body">
+              <h2 style="text-align: center;">CNP</h2>
+              <br>
+              <h6 style="text-align: center;">CERTIFICAT DE NON PAIEMENT DE CHEQUE</h6><br>
+              <div class="d-flex justify-content-between align-items-center">
+                  <button type="button" class="btn btn-primary btn-lg btn-block">Traitement</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              
+              <div class="card-body">
+                <h2 style="text-align: center;">ANR</h2>
+                <br><br>
+                <h6 style="text-align: center;">ATTESTATION DE NON REGULARISATION</h6><br>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Traitement</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              
+              <div class="card-body">
+                <h2 style="text-align: center;">ARP</h2>
+                <br>
+                <h6 style="text-align: center;">  attestation de reconstitution de provision et de reglement des interets de retard</h6><br>
+                <div class="d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Traitement</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+      </div>
+      
+    </div>
+  </div>

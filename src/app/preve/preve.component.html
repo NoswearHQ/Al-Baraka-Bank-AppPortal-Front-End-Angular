@@ -1,0 +1,54 @@
+<body>
+  <div class="jumbotron">     
+    <p>Avis de Rejets Prelevements</p>
+    <button type="button" class="btn btn-dark" (click)="back()">     <-- Retour</button>
+  </div>
+    <div class="container">
+         <div class="row">
+          <div class="col">
+            <div class="icon"><img src="../../assets/img/robot.png"></div>
+               </div>
+                 <div class="col">
+                  <br><br><br><br><br><br>
+                  <div class="form-group row">
+                    <label for="example-text-input" class="col-2 col-form-label">RIB</label>
+                    <div class="col-10">
+                      <input class="form-control" type="text"  name="RIB" [(ngModel)]="RIB">
+                    </div>
+                  </div>
+                   <div  *ngIf="Verif1" class="form-group row">
+                    <label for="example-date-input" class="col-2 col-form-label">Date</label>
+                    <div class="col-10">
+                      <input class="form-control" type="date" name="DateForm" [(ngModel)]="DateForm">
+                    </div>
+                  </div>
+                  <div class="text-center">
+                    <button  type="button" class="btn btn-primary" (click)="Verif()">Vérifier RIB</button>
+                    <button *ngIf="Verif1" type="button" class="btn btn-primary" (click)="Extractprevout()">Envoyer</button>
+                    <button *ngIf="showprint" type="button" class="btn btn-success" (click)="Print()"  >Imprimer</button>
+                    <button type="button" class="btn btn-danger" (click)="Clear()" >Effacer</button>
+
+     
+                     </div>
+                     <div *ngIf="Verif1" class="d-flex justify-content-center">
+                      <div class="alert alert-success">
+                        <strong>Client trouvé: {{nomTireur}} </strong>
+    
+                      </div>
+                      </div>
+    
+                      <div *ngIf="show1" class="alert alert-danger" role="alert">
+                        Verifier votre RIB : {{RIB}}
+                      </div>
+                      <div *ngIf="show2" class="alert alert-danger" role="alert">
+                        Date système est supérieure ou égale à la date d'opération
+                                            </div>
+                      <div *ngIf="showSpin" class="d-flex justify-content-center">
+                        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                          <span class="sr-only">Loading...</span>    
+                        </div>
+                        </div>
+               </div>
+               </div>           
+   </div>
+</body>

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" [routerLink]="['/menu']">
+    <img src="assets/img/logo.png" alt="logo" style="width:100px;height:30px;">
+   
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+  
+      <li class="nav-item">
+        <a [routerLink]="['/CHEQUERETURNED']" class="nav-link">Chèque reçu</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/KYC']"  class="nav-link">KYC</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/prev']" class="nav-link">Lettre de rejet</a>
+      </li>
+    
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a (click)="logout()" class="nav-link">Déconnexion</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>

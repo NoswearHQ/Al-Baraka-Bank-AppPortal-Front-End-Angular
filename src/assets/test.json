@@ -1,0 +1,9 @@
+{
+    "company": "********", 
+    "password": "********",
+    "userName": "CNPTWS",
+    "columnName": "ID",
+    "criteriaValue": "63821",
+    "operand": "EQ"
+}
+// Company and passord are private data

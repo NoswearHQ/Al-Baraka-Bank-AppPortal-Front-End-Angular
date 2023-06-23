@@ -1,0 +1,69 @@
+<body>
+  <div class="jumbotron">
+    <h1>Annexe 11</h1>      
+    <p>ATTESTATION DE REGULARISATION CONFORMEMENT A L’ARTICLE 412 TER</p>
+    <button type="button" class="btn btn-dark" (click)="back()">     <-- Retour</button>
+  </div>
+    <div class="container">
+         <div class="row">
+          <div class="col">
+            <div class="icon"><img src="../../assets/img/robot.png"></div>
+               </div>
+               <div class="col">
+                <br><br><br><br><br><br>
+                <div class="text-center">
+                  <h5 >Numéro de chèque </h5><br>
+              </div>
+              <input type="text" name="numerocheque" size="50" [(ngModel)]="numerocheque"><br><br>
+
+                  <button *ngIf="show2" type="button" class="btn btn-primary" (click)="ExtraireElectronique()">Extraire Electronique</button> 
+                   <button *ngIf="show2" type="button" class="btn btn-primary" (click)="ExtraireLettre()">Extraire Lettre</button> 
+                  <button type="button" class="btn btn-danger" (click)="Clear()" >Effacer</button>
+                  <button *ngIf="show" type="button" class="btn btn-success" (click)="Print()"  >Imprimer</button>
+                  <br> <br>
+              
+                  <div *ngIf="show" class="d-flex justify-content-center">
+                   <h5>Mr:</h5><br><br><br>
+                 
+                   <select class="custom-select" (change)="selectChangeHandler($event)">
+                     <option ></option>
+                    <option *ngFor="let book of Names" [ngValue]="book">{{book.name}} </option>
+                 
+                  </select>
+                   </div>
+                   <div *ngIf="show" class="d-flex justify-content-center">
+                    <div class="alert alert-success">
+                      <strong>Success!</strong>
+                    </div>
+                    </div>
+                   <br> <br> 
+                   <div *ngIf="showAlert" class="alert alert-danger" role="alert">
+                     {{err}}
+                   </div>
+                  <div *ngIf="showSpin" class="d-flex justify-content-center">
+                    
+                   <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+                     <span class="sr-only">Loading...</span>
+                     
+                   </div><br>
+                  
+                 </div>
+              
+
+                 
+                
+          </div>
+               </div>   
+               <table class="table table-striped">
+                <tr *ngFor="let book of tab"> 
+                  <th><h6>{{book.champ}}</h6></th>
+                  <th><h6>{{book.name}}</h6></th>
+                  
+                  
+                </tr>
+                
+
+
+             </table>        
+   </div>
+</body>

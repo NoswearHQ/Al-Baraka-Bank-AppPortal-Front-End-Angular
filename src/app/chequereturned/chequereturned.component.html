@@ -1,0 +1,50 @@
+
+<header>
+    <app-navbar></app-navbar>
+</header>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="icon"><img src="../../assets/img/attestation.png"></div>
+                <div class="content">
+                        <h3>CNP</h3>
+                                <a [routerLink]="['/CHEQUERETURNED/CNP']">Traitement</a><br><br><br>
+                                                        <p>Certificat de non-paiement </p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><img src="../../assets/img/attestation.png"></div>
+                <div class="content">
+                    <h3>ANR</h3>
+                                <a [routerLink]="['/CHEQUERETURNED/ANR']">Traitement</a><br><br><br>
+                                                        <p>Attestations de non régularisation </p>
+                    
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><img src="../../assets/img/attestation.png"></div>
+                <div class="content">
+                    <h3>ARP</h3>
+                                <a [routerLink]="['/CHEQUERETURNED/ARP']">Traitement</a>	<br><br><br>
+                                                        <p>Attestations de reconstitution de provision et de règlement des intérêts de retard</p>
+            
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><img src="../../assets/img/attestation.png"></div>
+                <div class="content">
+                    <h3>Annexe 11</h3>
+                                <a [routerLink]="['/CHEQUERETURNED/Annex11']">Traitement</a>	<br><br><br>
+                                                        <p>ATTESTATION DE REGULARISATION
+                                                            CONFORMEMENT A L’ARTICLE 412 TER 
+                                                            </p>
+                
+            </div>
+        </div>
+    </div>
+    
+    </body>
+    <footer>
+        <app-footer></app-footer>
+    </footer>
